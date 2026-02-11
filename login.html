@@ -29,5 +29,25 @@
             <button type="submit" style="width: 100%; margin-top: 15px; padding: 10px; background: blue; color: white; border: none; cursor: pointer;">Iniciar Sesión</button>
         </form>
     </div>
+     <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            var correo = document.getElementById('correo').value;
+            var contrasena = document.getElementById('contrasena').value;
+            
+            if (correo.trim() === '' || contrasena.trim() === '') {
+                alert('Por favor complete todos los campos');
+                return;
+            }
+            
+            if (!correo.includes('@')) {
+                alert('El correo debe contener @');
+                return;
+            }
+            
+            window.location.href = 'home.html';
+        });
+    </script>
 </body>
 </html>
