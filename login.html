@@ -1,32 +1,81 @@
+<!-- start login.html -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Iniciar Sesión</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            padding: 70px;
+        }
+
+        .login-container {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            margin: 50px auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: black;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #999;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
-<body style="background-color: #f0f0f0; padding: 70px;">
-    <div style="background: white; padding: 20px; width: 300px; margin: 50px auto;">
-        <h2 style="text-align: center; color: black;">Iniciar Sesión</h2>
+<body>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
         <form id="loginForm">
-            <div style="margin-bottom: 15px;">
-                <label for="correo" style="display: block; margin-bottom: 5px;">Correo electrónico</label>
+            <div class="form-group">
+                <label for="correo">Correo electrónico</label>
                 <input 
-                    type="text" 
+                    type="email" 
                     id="correo" 
+                    name="correo"
                     placeholder="Ingrese su correo" 
-                    style="width: 100%; padding: 8px; border: 1px solid #999; box-sizing: border-box;"
+                    required
                 />
             </div>
-            <div style="margin-bottom: 15px;">
-                <label for="contrasena" style="display: block; margin-bottom: 5px;">Contraseña</label>
+            <div class="form-group">
+                <label for="contrasena">Contraseña</label>
                 <input 
                     type="password" 
                     id="contrasena" 
+                    name="contrasena"
                     placeholder="Ingrese su contraseña" 
-                    style="width: 100%; padding: 8px; border: 1px solid #999; box-sizing: border-box;"
+                    required
+                    autocomplete="current-password"
                 />
             </div>
-            <button type="submit" style="width: 100%; margin-top: 15px; padding: 10px; background: blue; color: white; border: none; cursor: pointer;">Iniciar Sesión</button>
+            <button type="submit">Iniciar Sesión</button>
         </form>
     </div>
      <script>

@@ -3,22 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Bienvenido</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .contenedor {
+            background: white;
+            padding: 20px;
+            width: 800px;
+            margin: 50px auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: black;
+        }
+
+        .galeria {
+            display: flex;
+            gap: 10px;
+        }
+
+        .imagen-container {
+            flex: 1;
+        }
+
+        img {
+            width: 100%;
+            border: 1px solid #999;
+        }
+    </style>
 </head>
-<body style="background-color: #f0f0f0; padding: 20px;">
-    <div style="background: white; padding: 20px; width: 800px; margin: 50px auto;">
-        <h2 style="text-align: center; color: black;">Bienvenido</h2>
+<body>
+    <div class="contenedor">
+        <h2>Bienvenido</h2>
         
-        <div style="display: flex; gap: 10px;">
-            <div style="flex: 1;">
-                <img src="tec.jpg" alt="Imagen 1" style="width: 100%; border: 1px solid #999;">
+        <div class="galeria">
+            <div class="imagen-container">
+                <img src="tec.jpg" alt="Imagen 1">
             </div>
             
-            <div style="flex: 1;">
-                <img src="tecmi.png" alt="Imagen 2" style="width: 100%; border: 1px solid #999;">
+            <div class="imagen-container">
+                <img src="tecmi.png" alt="Imagen 2">
             </div>
             
-            <div style="flex: 1;">
-                <img src="unam.jpg" alt="Imagen 3" style="width: 100%; border: 1px solid #999;">
+            <div class="imagen-container">
+                <img src="unam.jpg" alt="Imagen 3">
             </div>
         </div>
     </div>
